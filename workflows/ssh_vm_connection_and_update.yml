@@ -2,6 +2,24 @@ name: Connect to Google Cloud VM and update server
 
 on:
   workflow_call:
+    inputs:
+      VM_ADDRESS:
+        required: true
+        type: string
+      VM_PORT:
+        required: true
+        type: string
+      VM_USERNAME:
+        required: true
+        type: string
+      SCRIPT_PATH:
+        required: true
+        type: string
+    secrets:
+      VM_PRIVATE_KEY:
+        required: true
+      GCP_CREDENTIALS:
+        required: true
 
 jobs:
   connect-to-vm:

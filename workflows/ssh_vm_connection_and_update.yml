@@ -31,7 +31,7 @@ jobs:
 
       # Run update script on the VM
       - name: Run update script on VM
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ vars.VM_ADDRESS }}
           username: ${{ vars.VM_USERNAME }}
